@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import Dropdown from "react-dropdown";
 import { useTheme } from "../../contexts/ThemeContext";
@@ -26,20 +26,24 @@ const SingleProject = ({ data }) => {
   const [activeTicket, setActiveTicket] = useState(null);
   const { title = null, children = null } = data;
   const { theme, toggleTheme } = useTheme();
-  const [allData] = useState([
-    {
-      title: "To Do",
-      content: filterTicketsFromProject(data, "TO_DO"),
-    },
-    {
-      title: "In Progress",
-      content: filterTicketsFromProject(data, "IN_PROGRESS"),
-    },
-    {
-      title: "Done",
-      content: filterTicketsFromProject(data, "DONE"),
-    },
-  ]);
+  const [allData, setAllData] = useState(null);
+
+  useEffect(() => {
+    setAllData([
+      {
+        title: "To Do",
+        content: filterTicketsFromProject(data, "TO_DO"),
+      },
+      {
+        title: "In Progress",
+        content: filterTicketsFromProject(data, "IN_PROGRESS"),
+      },
+      {
+        title: "Done",
+        content: filterTicketsFromProject(data, "DONE"),
+      },
+    ]);
+  }, [allData]);
 
   function openModalTicket(ticketData) {
     setActiveTicket(ticketData);
