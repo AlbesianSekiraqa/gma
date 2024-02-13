@@ -1,0 +1,62 @@
+@import "../../assets//variables/variables";
+
+.navlink {
+  text-decoration: none;
+  transition: 0.2s $superSmooth;
+  position: relative;
+  text-wrap: nowrap;
+  color: $primary-dark-color;
+
+  &::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 3px;
+    opacity: 0;
+    visibility: hidden;
+    height: 2px;
+    color: #000;
+    transform: translateX(-50%);
+    transition: 0.3s $superSmooth;
+    background-color: $primary-light-color;
+  }
+
+  &:hover {
+    color: $primary-light-color;
+
+    &::before {
+      width: 100%;
+      opacity: 1;
+      visibility: visible;
+      background-color: $primary-light-color;
+    }
+  }
+
+  &.active {
+    color: $primary-light-color;
+
+    &::before {
+      opacity: 1;
+      visibility: visible;
+      width: 100%;
+    }
+  }
+}
+
+.dark {
+  .navlink {
+    color: #fff;
+  }
+
+  svg {
+    path {
+      fill: #fff;
+    }
+  }
+
+  input {
+    background-color: transparent;
+    color: #fff;
+  }
+}

@@ -1,0 +1,66 @@
+@import "poly-fluid-sizing";
+
+h1 {
+  @include poly-fluid-sizing(
+    "font-size",
+    (
+      320px: 40px,
+      567px: 50px,
+      1200px: 65px,
+    )
+  );
+}
+
+h2 {
+  @include poly-fluid-sizing(
+    "font-size",
+    (
+      320px: 35px,
+      567px: 46px,
+      1200px: 54px,
+    )
+  );
+}
+
+h3 {
+  @include poly-fluid-sizing(
+    "font-size",
+    (
+      320px: 20px,
+      567px: 25px,
+      1200px: 34px,
+    )
+  );
+}
+
+h4,
+li.title {
+  @include poly-fluid-sizing(
+    "font-size",
+    (
+      320px: 20px,
+      567px: 25px,
+      1200px: 26px,
+    )
+  );
+}
+
+h5 {
+  @include poly-fluid-sizing(
+    "font-size",
+    (
+      320px: 16px,
+      1200px: 18px,
+    )
+  );
+}
+
+q {
+  @include poly-fluid-sizing(
+    "font-size",
+    (
+      320px: 25px,
+      1200px: 34px,
+    )
+  );
+}

@@ -1,0 +1,43 @@
+@import "poly-fluid-sizing";
+
+// Colors
+$primary-dark-color: #151a3c;
+$primary-color: #1d2354;
+$primary-medium-color: #37429a;
+$primary-light-color: #6c77cb;
+$primary-superLight-color: #b7bde6;
+$tag-olor: #7f85a8;
+
+$color-grey: #878686;
+$color-grey-medium: #bdbaba;
+$color-grey-light: #f0f2f2;
+
+$color-green: #3b6f78;
+$color-green-medium: #6ea5ae;
+$color-green-light: #a5e1eb;
+
+$color-error: #ff0000;
+
+// Vertical Sizes
+$size-tiny: 20px;
+$size-small: 40px;
+$size-medium: 60px;
+$size-big: 80px;
+$size-large: 100px;
+$size-extra-large: 140px;
+
+//  Formats
+$container-float-half: calc((100vw - 1310px) / 2);
+$container-float-half-large: calc((100vw - 1170px) / 2);
+$container-float-half-mid: calc((100vw - 960px) / 2);
+$container-float-half-small: calc((100vw - 720px) / 2);
+
+// Breakpoints
+$extraSmall: 567px;
+$small: 768px;
+$medium: 992px;
+$large: 1200px;
+
+// Transitions
+$superSmooth: cubic-bezier(0.25, 1, 0.5, 1);
+$linearSmooth: cubic-bezier(0, 0.55, 0.45, 1);
